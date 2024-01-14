@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public class PersonServiceImpl implements PersonService {
-    List<Person> persons = List.of(
+    Person[] persons = {
             new Person(
                     "Жан",
                     "Рено",
@@ -37,8 +37,8 @@ public class PersonServiceImpl implements PersonService {
                     "Патрик",
                     "1000",
                     "2345",
-                    4)
-            );
+                    4),
+    };
 
     String[] professions = {
             "безработный",

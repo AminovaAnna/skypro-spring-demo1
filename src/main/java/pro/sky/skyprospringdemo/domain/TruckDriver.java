@@ -5,6 +5,7 @@ public class TruckDriver extends Driver {
         super(name, surname, passport, driverLicenseNumber, professionNumber);
     }
 
+
     public void setDriverLicenseNumber(String driverLicenseNumber) {
         if (driverLicenseNumber != null && driverLicenseNumber.startsWith("2")) {
             super.setDriverLicenseNumber(driverLicenseNumber);

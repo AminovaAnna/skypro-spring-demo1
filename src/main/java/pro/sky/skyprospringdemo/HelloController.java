@@ -15,6 +15,7 @@ public class HelloController {
         return helloServiceImpl.hello();
     }
 
+
     @GetMapping(path = "/hello")
     public String answerHelloName(@RequestParam("name") String userName) {
         return helloServiceImpl.answerHelloName(userName);

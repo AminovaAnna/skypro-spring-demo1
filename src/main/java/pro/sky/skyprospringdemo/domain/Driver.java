@@ -13,6 +13,7 @@ public class Driver extends Person {
         return driverLicenseNumber;
     }
 
+
     public void setDriverLicenseNumber(String driverLicenseNumber) {
         this.driverLicenseNumber = driverLicenseNumber;
     }

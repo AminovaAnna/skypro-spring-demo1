@@ -41,6 +41,7 @@ public class Person {
         return professionNumber;
     }
 
+
     public void setProfessionNumber(int professionNumber) {
         this.professionNumber = professionNumber;
     }
