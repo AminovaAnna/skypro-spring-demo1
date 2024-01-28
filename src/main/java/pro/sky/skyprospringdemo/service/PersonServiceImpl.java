@@ -60,6 +60,7 @@ public class PersonServiceImpl implements PersonService {
             "актер", 4
     );
 
+    @Override
     public List<Person> getPersonsByProfession(Integer professionNumber) {
         List<Person> result = new ArrayList<>();
         for (Person person : persons.values()) {
@@ -69,11 +70,12 @@ public class PersonServiceImpl implements PersonService {
         }
         return result;
     }
-@Override
-    public List<Person> getPersonByProfessions(List<Integer> professionNumbers){
+
+    @Override
+    public List<Person> getPersonByProfessions(List<Integer> professionNumbers) {
         List<Person> result = new ArrayList<>();
         for (Person person : persons.values()) {
-            if (person.getProfessionNumbers().containsAll(professionNumbers)){
+            if (person.getProfessionNumbers().containsAll(professionNumbers)) {
                 result.add(person);
             }
         }
@@ -111,7 +113,8 @@ public class PersonServiceImpl implements PersonService {
         return personDescription;
     }
 
-    private String getProfessionNames(Set<Integer> professionNumbers) {
+    @Override
+    public String getProfessionNames(Set<Integer> professionNumbers) {
         String result = "";
         for (Integer professionNumber : professionNumbers) {
             result = result + " " + professions[professionNumber];
@@ -126,6 +129,11 @@ public class PersonServiceImpl implements PersonService {
             throw new RuntimeException("Человек с таким номером паспорта не найден");
         }
         person.getProfessionNumbers().add(profession);
+    }
+
+    @Override
+    public void addPerson(Person person) {
+
     }
 
 
